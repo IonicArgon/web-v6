@@ -1,4 +1,321 @@
+/* ==========================================================================
+   base style system
+   ========================================================================== */
+:root {
+  /* --- typography --- */
+  --font-serif: "Source Serif 4", "Georgia", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  
+  --size-wordmark: clamp(2.75rem, 11vw, 92px);
+  --size-base: 1.125rem;
+  --size-sm:   0.875rem;   /* dates, captions, footer */
+  --size-h3:   1.25rem;
+  --size-h2:   1.5rem;
+  --size-h1:   2rem;
+
+  --leading-body: 1.65;
+  --leading-tight: 1.2;
+
+  --ink:       #1c1c1c;   /* body text */
+  --ink-soft:  #6b6b6b;   /* dates, captions, meta */
+  --ink-faint: #a8a8a8;   /* rules, borders */
+  --link:      #1c1c1c;
+  --paper:     #fdfdfc;
+
+  --measure: 68ch;
+
+  /* --- colors for workmark --- */
+  --color-marco: #6b7280;
+  --color-tan:   #9ca3af;
+  --color-gents: #c8cbd0;
+
+  /* --- colors for grid background + main content --- */
+  --color-page-bg: white;
+  --color-line: rgba(0, 0, 0, .15);
+
+  /* --- layout --- */
+  --page-max-width: 65vw;
+  --page-min-height: 90vh;
+  --page-margin: 5vh;
+  --page-padding: 25px;
+  --page-border-width: 2px;
+
+  /* --- background grid --- */
+  --grid-angle: 45deg;
+  --grid-gap: 58px;
+  --grid-line: 60px;
+
+  /* --- decor --- */
+  --gents-rotate: 16deg;
+  
+  /* --- spacing --- */
+  --gap: 1em;
+}
+
+/* ==========================================================================
+   reset css defaults
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+h1, h2, h3, h4, p, ul, ol, figure, blockquote { margin: 0; }
+
+/* ==========================================================================
+   accessibility
+   ========================================================================== */
+/* skip-to-content link */
+.skip-link {
+  position: absolute;
+  left: 0.5em;
+  top: 0.5em;
+  z-index: 10;
+
+  padding: 0.4em 0.8em;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  color: var(--link);
+  text-decoration: none;
+
+  transform: translateY(-150%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   fonts
+   ========================================================================== */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/css/fonts/SourceSerif4-VariableFont_opsz\,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("/css/fonts/SourceSerif4-Italic-VariableFont_opsz\,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ==========================================================================
+   base + body
+   ========================================================================== */
+html {
+  background: var(--paper);
+}
+
 body {
-    max-width: 50vw;
-    margin: auto;
+  font-family: var(--font-serif);
+  font-size: var(--size-base);
+  line-height: var(--leading-body);
+  color: var(--ink);
+}
+
+a {
+  color: var(--link);
+}
+
+a[href^="http"]:not([href*="marcotangents.xyz"])::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: var(--ink-soft);
+}
+
+/* diagonal grid behind everything */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(var(--grid-angle),
+      transparent 0 var(--grid-gap), var(--color-line) var(--grid-gap) var(--grid-line)),
+    repeating-linear-gradient(calc(var(--grid-angle) * -1),
+      transparent 0 var(--grid-gap), var(--color-line) var(--grid-gap) var(--grid-line));
+}
+
+/* ==========================================================================
+   typography
+   ========================================================================== */
+h1, h2, h3 { line-height: var(--leading-tight); }
+h1 { font-size: var(--size-h1); }
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+
+p, ul, ol, blockquote, figure { margin: 0 0 1.5em; }
+h2, h3 { margin: 2em 0 0.5em; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+figcaption {
+  margin-top: 0.5em;
+  font-size: var(--size-sm);
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+/* ==========================================================================
+   header
+   ========================================================================== */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ==========================================================================
+   header - wordmark
+   ========================================================================== */
+.wordmark {
+  margin: 0;
+  font-size: var(--size-wordmark);
+  font-weight: 600;
+  text-align: center;
+}
+.wordmark a {
+  text-decoration: none;
+  color: inherit;
+}
+.marco { color: var(--color-marco); }
+.tan {
+  color: var(--color-tan);
+  position: relative;
+}
+.gents {
+  position: absolute;
+  left: 105%;
+  bottom: 0.3em;
+  font-size: 0.4em;
+  color: var(--color-gents);
+  white-space: nowrap;
+  font-weight: 400;
+
+  transform: rotate(var(--gents-rotate));
+  transform-origin: 0 0;
+}
+
+/* ==========================================================================
+   header - navbar
+   ========================================================================== */
+nav ul {
+  display: flex;
+  gap: var(--gap);
+  font-size: var(--size-base);
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   page layout
+   ========================================================================== */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--measure);
+  margin-block: var(--gap);
+  align-self: center;
+}
+.page {
+  max-width: var(--page-max-width);
+  min-height: var(--page-min-height);
+  box-sizing: border-box;
+
+  margin: var(--page-margin) auto;
+  padding: var(--page-padding);
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--color-page-bg);
+  border: var(--page-border-width) solid var(--color-line);
+}
+
+/* ==========================================================================
+   page layout for posts
+   ========================================================================== */
+.post-content {
+  margin-top: var(--gap);
+}
+
+.post-back {
+  display: inline-block;
+  margin-bottom: 1.5em;
+
+  padding: 0.3em 0.7em;
+  font-size: var(--size-sm);
+  color: var(--ink-soft);
+  text-decoration: none;
+
+  border: 1px solid var(--ink-faint);
+}
+.post-back:hover {
+  color: var(--link);
+  border-color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   post navigation
+   ========================================================================== */
+.post-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap);
+
+  margin-top: 3em;
+  padding-top: 1.5em;
+  border-top: 1px solid var(--ink-faint);
+}
+.post-nav__next {
+  margin-left: auto;
+  text-align: right;
+}
+.post-nav__link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  max-width: 45%;
+  text-decoration: none;
+}
+.post-nav__dir {
+  font-size: var(--size-sm);
+  color: var(--ink-soft);
+}
+.post-nav__title {
+  color: var(--link);
+}
+.post-nav__link:hover .post-nav__title {
+  text-decoration: underline;
+}
+
+/* ==========================================================================
+   for tablet
+   ========================================================================== */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .page {
+    max-width: none;
+    margin: var(--page-margin) 6vw;   /* 6vw side margins instead of ~17vw */
+  }
+}
+
+/* ==========================================================================
+   for mobile
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* diagonal grid is too busy on a small screen */
+  body::before { display: none; }
+  .page {
+    max-width: none;
+    min-height: 100vh;
+    min-height: 100dvh;
+    margin: 0;
+    border: none;
+  }
 }
