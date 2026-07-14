@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: Contact
+description: You really want to get in touch with me?
 ---
 
 # Contact

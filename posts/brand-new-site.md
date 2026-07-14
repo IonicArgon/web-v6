@@ -1,5 +1,6 @@
 ---
 title: A Brand New Website
+description: First post on the sixth version of my website.
 date: 2026-07-14
 ---
 

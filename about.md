@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: About
+description: Miscellaneous facts(?) about me.
 ---
 
 # About
