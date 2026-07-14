@@ -31,6 +31,7 @@
   {% if shareImage %}<meta name="twitter:image" content="{{ metadata.url }}{{ shareImage }}">{% endif %}
 
   <meta name="theme-color" content="#fdfdfc">
+  <link rel="alternate" type="application/atom+xml" title="{{ metadata.title }}" href="/feed.xml">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -57,7 +58,7 @@
     </main>
 
     <footer>
-      <p>© 2026</p>
+      <p>© {{ metadata.year }} · <a href="/feed.xml">RSS</a></p>
     </footer>
   </div>
 </body>

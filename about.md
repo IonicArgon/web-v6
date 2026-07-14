@@ -51,10 +51,6 @@ Anyway, here are some games I like:
 - OpenTTD - I get to build giant rail highways that would never exist in real life,
   at least until my money runs out.
 
-## Movies
-
-tbd
-
 ## Reads
 
 Shamefully, there isn't much here, but I'd hope to expand this section in the future.
@@ -114,3 +110,35 @@ atrocious.)*
   the speed to 2666 MHz 😂😂😂).
 - **Storage:** WD Black SN770 512GB (aftermarket) + some SK Hynix 256GB SSD
   (original) that I stuffed into an M.2 to 2.5" SATA converter.
+
+## Funny Buttons
+
+Hey, look at that, 88x31 buttons. And this time, they're on a static webpage with
+no JavaScript!
+
+{% buttons %}
+{% button "/media/site/88x31/bisexual.png", "", "Bisexual pride" %}
+{% button "/media/site/88x31/rainbow.png", "", "Rainbow pride" %}
+{% button "/media/site/88x31/cdaweb.gif", "", "Canadian on the web" %}
+{% button "/media/site/88x31/cdi.gif", "", "CD-i games" %}
+{% button "/media/site/88x31/nocookies.gif", "", "No cookies?" %}
+{% button "/media/site/88x31/css.png", "", "CSS is awesome" %}
+{% button "/media/site/88x31/danger_dhmo.gif", "", "Danger: dihydrogen monoxide" %}
+{% button "/media/site/88x31/e-hs.png", "", "Download Sburb" %}
+{% button "/media/site/88x31/norton2.gif", "", "Powered by Symantec Norton Antivirus" %}
+{% button "/media/site/88x31/hl.gif", "", "Half-Life" %}
+{% button "/media/site/88x31/ltt.gif", "", "Click here for free tech tips" %}
+{% button "/media/site/88x31/paywalls.gif", "", "Paywalls gatekeep knowledge" %}
+{% button "/media/site/88x31/ralseismokingadart.gif", "", "Ralsei bluntsmoken" %}
+{% button "/media/site/88x31/sil-vous-plait-aider.gif", "", "Pain." %}
+{% button "/media/site/88x31/transnow2.gif", "", "Trans rights now!" %}
+{% button "/media/site/88x31/yanknow.gif", "", "Yankovic now!" %}
+{% button "/media/site/88x31/youre_telling_me.png", "", "You're telling me a queer coded this?" %}
+{% button "/media/site/88x31/ie1984.gif", "", "Big Brother's Internet Explorer" %}
+{% button "/media/site/88x31/anythingbut.gif", "", "Anything but Chrome" %}
+{% button "/media/site/88x31/ublock-now.png", "", "uBlock Origin now!" %}
+{% button "/media/site/88x31/sucks.gif", "", "This website sucks" %}
+{% button "/media/site/88x31/firefoxget.gif", "", "Get Firefox!" %}
+{% button "/media/site/88x31/linuxnow2.gif", "", "Linux now!" %}
+{% button "/media/site/88x31/typhrakromer.gif", "", "KROMER" %}
+{% endbuttons %}

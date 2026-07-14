@@ -1,6 +1,27 @@
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import metadata from "./_data/metadata.js";
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("media/**/*.{jpg,jpeg,png,webp,gif,mp4}");
   eleventyConfig.addPassthroughCopy("css");
+
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed.xml",
+    collection: {
+      name: "posts",
+      limit: 20,
+    },
+    metadata: {
+      language: metadata.language,
+      title: metadata.title,
+      subtitle: metadata.description,
+      base: metadata.url + "/",
+      author: {
+        name: metadata.author.name,
+      },
+    },
+  });
 
   eleventyConfig.addFilter("readableDate", (d) =>
     d.toLocaleDateString("en-CA", {
@@ -9,6 +30,17 @@ export default function (eleventyConfig) {
   );
 
   eleventyConfig.addFilter("dateToISO", (d) => d.toISOString());
+
+  // 88x31 button wall: emits real <img> HTML so buttons flow in a flex row
+  // instead of stacking like default markdown images.
+  eleventyConfig.addPairedShortcode("buttons", (content) =>
+    `<div class="button-wall">${content}</div>`
+  );
+
+  eleventyConfig.addShortcode("button", (src, href, alt = "") => {
+    const img = `<img src="${src}" alt="${alt}" width="88" height="31" loading="lazy">`;
+    return href ? `<a href="${href}">${img}</a>` : img;
+  });
 
   // for markddown, ![alt](src "title") -> use title as figure caption
   eleventyConfig.amendLibrary("md", (md) => {

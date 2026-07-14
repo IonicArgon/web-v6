@@ -176,6 +176,7 @@ header {
   margin: 0;
   font-size: var(--size-wordmark);
   font-weight: 600;
+  line-height: var(--leading-tight);
   text-align: center;
 }
 .wordmark a {
@@ -211,6 +212,13 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+/* ==========================================================================
+   footer
+   ========================================================================== */
+footer {
+  padding-left: 1em;
 }
 
 /* ==========================================================================
@@ -259,6 +267,27 @@ main {
 .post-back:hover {
   color: var(--link);
   border-color: var(--ink-soft);
+}
+
+/* ==========================================================================
+   88x31 button wall
+   ========================================================================== */
+.button-wall {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  margin-block: var(--gap);
+  
+}
+.button-wall img {
+  display: block;
+  width: 88px;
+  height: 31px;
+}
+.button-wall a {
+  display: inline-flex;
+  line-height: 0;
 }
 
 /* ==========================================================================
@@ -317,5 +346,8 @@ main {
     min-height: 100dvh;
     margin: 0;
     border: none;
+  }
+  footer {
+    padding-left: 0px;
   }
 }

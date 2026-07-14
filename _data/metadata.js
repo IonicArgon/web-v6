@@ -1,6 +1,7 @@
 export default {
   title: "Marco Tan(gents)",
   description: "Some of my ramblings.",
+  year: new Date().getUTCFullYear(),
 
   url: "https://marcotangents.xyz",
 
