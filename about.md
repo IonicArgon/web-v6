@@ -6,19 +6,39 @@ description: Miscellaneous facts(?) about me.
 
 # About
 
-Hey. I'm Marco (he/they). I'm finishing my *Mechatronics & Biomedical Engineering*
-degree at McMaster University and I'm also the *chief technology officer* at
-[crewd.](https://crewd.ai) I hope to use this place to share things I found
-interesting, ramble about a litany of topics, and share my sentiments as I
-continue playing this game they call "life".
+Hey. I’m Marco (he/they) and welcome to… what do I call this, my online scrapbook?
+Internet nook? Something along those lines. I’m hoping to use this place to share
+things I find interesting, ramble about a litany of topics, and share my sentiments
+as I continue playing this game people call “life” (*quite mixed feelings about it,
+by the way. Feels very pay-to-win*).
 
-Below, you'll find miscellaneous facts about me, potentially (not) informational.
+Generally, I like STEM topics though I’ll talk about basically anything I find
+interesting. You could’ve probably figured that out from my choice of higher education;
+I’m finishing up my degree in *Mechatronics and Biomedical Engineering* at McMaster
+University (they just *love* to smash programs together, huh?). I’m more interested
+in the software aspect of mechatronics, though the hardware side is pretty awesome,
+too. I dunno, I just love the idea of cybernetic systems and the complex ways we
+can control machines with algorithms. I don’t love the fact that it can and is used
+for many nefarious purposes, but I think that speaks more to the human condition
+than it does *the strength and certainty of steel (my blessed machine can do
+no harm).*
+
+Besides that, I’m also the *Chief Technology Officer* at [crewd.](https://crewd.ai/en),
+a startup I’m working on with a couple of my friends. We’re hoping to create a
+modern, labour-sharing marketplace that the construction sector can use to lend
+out benched workers instead of laying them off during downtime. I would talk more
+about it, but that’s what the company website is for and *you should probably just
+head over there* (after you’ve finished exploring this site, of course). Plus, I
+don’t particularly want to fill this page with work-related topics, just “me” topics.
+
+Below, you'll find some miscellaneous, material facts about me that are potentially
+(not) informational.
 
 ## Music
 
-I have a Spotify playlist of a handful of songs that *truly* represents my
+I have a hand-curated Spotify playlist that I believe *truly* represents my
 disorganized taste in music. I *would* embed it if it wasn't for the fact that
-it necessitates DRM on this website which I *extensively* object to. Here's the 
+it necessitates DRM on this website which I *extensively* object to. Here's the
 list in plain text instead:
 
 1. Hozier - Take Me to Church
@@ -45,16 +65,18 @@ Anyway, here are some games I like:
   great story and incredible music.
 - *Slay the Princess* - The story, the art, the music, the everything, I love it all.
 - *Cyberpunk 2077* - (after the launch fiasco, specifically) Being a cyber-samurai or
-  super-netrunner is fun and all, but consider *blowing up everyone with the O'Five-*
+  super-netrunner is fun and all, but consider running around like a crazed gunman,
+  blowing everyone up into smithereens-
 - *Barotrauma* - Especially love the circuitry mechanics in the game; my friends call
-  me insane and I'm not sure why.
+  me insane and I'm not particularly sure why.
 - *Hades* & *Hades II* - *something something squidward "oh no he's hot" meme something something.*
 - OpenTTD - I get to build giant rail highways that would never exist in real life,
   at least until my money runs out.
 
 ## Reads
 
-Shamefully, there isn't much here, but I'd hope to expand this section in the future.
+There isn't a whole lot here admittedly, though I hope to expand this section in
+the near future.
 
 - *The Way of Kings* (still reading) - First story I've read in a while, recommended
   by a good friend. I must say, I love the way Sanderson builds his worlds and
