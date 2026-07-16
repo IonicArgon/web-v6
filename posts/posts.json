@@ -1,5 +1,6 @@
 {
   "tags": "posts",
   "layout": "post.njk",
-  "ogType": "article"
+  "ogType": "article",
+  "published": false
 }

@@ -33,6 +33,11 @@
   --color-page-bg: white;
   --color-line: rgba(0, 0, 0, .15);
 
+  /* --- for drafts specifically --- */
+  --color-draft-bg: #880808;
+  --color-draft-fg: white;
+
+
   /* --- layout --- */
   --page-max-width: 65vw;
   --page-min-height: 90vh;
@@ -267,6 +272,14 @@ main {
 .post-back:hover {
   color: var(--link);
   border-color: var(--ink-soft);
+}
+
+.draft-banner {
+  background-color: var(--color-draft-bg);
+  color: var(--color-draft-fg);
+  text-align: center;
+  padding: var(--gap);
+  text-transform: uppercase;
 }
 
 /* ==========================================================================
